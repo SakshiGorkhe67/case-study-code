@@ -1,0 +1,76 @@
+/////////navvvbarrr
+<nav className="navbar navbar-expand-lg navbar-light bg-dark">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="/">
+                        <img src={logo} width="auto" height="40" className="d-inline-block align-top" alt="Logo" />
+                    </Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav me-auto"></ul>
+                        <ul className="navbar-nav">
+                            <li className="nav-item active">
+                                <Link className="nav-link text-white" to="/">admin-home</Link>
+                            </li>
+                            <li className="nav-item active">
+                                <Link className="nav-link text-white" to="/logout">logout</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+            ////////admin-home
+            <div class="jumbotron text-center " style={{ backgroundColor: '#f8f9fa', padding: '2rem' }}>
+                <h1 class="display-4">Welcome back, Admin</h1>
+                <p class="lead">Easily manage your data from this admin <span class="bg-warning text-dark p-1">CLA</span></p>
+            </div>
+
+
+
+            ///////admin-home
+            <div className="row">
+                <div class="col-sm-3 mt-4">
+                    <div class="card">
+                        <div class="card-body" >
+                            <h5 class="card-title">Categories</h5>
+                            <p class="card-text">Manage the categories section here.</p>
+                            <Link to="addcategory" class="btn btn-primary">Manage</Link>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-4">
+                    <div class="card">
+                        <div class="card-body" >
+                            <h5 class="card-title">Products</h5>
+                            <p class="card-text">Manage all the Products here.</p>
+                            <Link to="/addProduct" class="btn btn-primary">Manage</Link>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-4">
+                    <div class="card">
+                        <div class="card-body" >
+                            <h5 class="card-title">Customers</h5>
+                            <p class="card-text">Manage all the Customer here.</p>
+                     
+                            <Link to="/addCustomer" class="btn btn-primary">Manage</Link>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-4">
+                    <div class="card">
+                        <div class="card-body" >
+                            <h5 class="card-title">Orders</h5>
+                            <p class="card-text">Manage all the Orders here.</p>
+                            <a href="#" class="btn btn-primary">Manage</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <Route path='/' element={<Home/>}> </Route>

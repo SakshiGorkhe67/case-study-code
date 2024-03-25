@@ -1,0 +1,25 @@
+import axios from "axios";
+
+//base url
+const API_URL="http://localhost:8080";
+
+class CategoryService{
+   
+   saveCategory(){
+      return axios.post(API_URL+"/saveCategory",category);
+   }
+   getAllCategory(){
+      return axios.get(API_URL+"getAllCategory");
+
+   }
+getAllCategory(){
+   return axios.get(API_URL+"/getCategoryById/"+id);
+}
+updateCategory(){
+   return axios.put(API_URL+"/updateCategory/"+category.id,category);
+}
+deleteCategory(){
+   return axios.delete(API_URL+"/deleteCategory/"+id);
+}
+}
+export default new CategoryService;
